@@ -6,12 +6,7 @@
 
 body {
 	font-family: 'Segoe UI', sans-serif;
-}
-
-.wrapper {
-	max-width: 320px;
 	background-color: #121212;
-	margin: 0 auto;
 }
 
 .nav {
