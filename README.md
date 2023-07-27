@@ -6,4 +6,4 @@ A simple and user-friendly calculator built with HTML, CSS, and JavaScript. Perf
 
 ### Default View
 
-![Default](screenshots/s3.png)
+![Default](screenshots/s3.PNG)
