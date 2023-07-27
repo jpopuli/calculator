@@ -6,16 +6,16 @@ A simple and user-friendly calculator built with HTML, CSS, and JavaScript. Perf
 
 ### Default View
 
-![Default](screenshots/s3.PNG)
+![Default](screenshots/s3.PNG);
 
 ### Inputs / Expression
 
-![Default](screenshots/s1.PNG)
+![Default](screenshots/s1.PNG);
 
-### History
+### Computation History
 
-![Default](screenshots/s2.PNG)
+![Default](screenshots/s2.PNG);
 
-### Validation of Input
+### Validation
 
-![Default](screenshots/s4.PNG)
+![Default](screenshots/s4.PNG);
