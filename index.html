@@ -9,30 +9,29 @@
 	</head>
 	<body>
 		<nav class="nav">
-			<!-- History -->
-			<button>History</button>
+			<button type="button" data-history>History</button>
 		</nav>
 
 		<section class="input">
-			<h1 data-expression></h1>
+			<p data-expression></p>
 			<p data-calculated></p>
 		</section>
 
 		<section class="buttons">
-			<button data-clear>C</button>
-			<button data-operator>&divide;</button>
-			<button data-operator>&times;</button>
-			<button data-delete>DEL</button>
+			<button data-clear class="accent">C</button>
+			<button data-operator class="accent">&divide;</button>
+			<button data-operator class="accent">&times;</button>
+			<button data-delete class="accent">&larr;</button>
 
 			<button data-number>7</button>
 			<button data-number>8</button>
 			<button data-number>9</button>
-			<button data-operator>&minus;</button>
+			<button data-operator class="accent">&minus;</button>
 
 			<button data-number>4</button>
 			<button data-number>5</button>
 			<button data-number>6</button>
-			<button data-operator>&plus;</button>
+			<button data-operator class="accent">&plus;</button>
 
 			<button data-number>1</button>
 			<button data-number>2</button>
@@ -43,6 +42,13 @@
 			<button data-number>0</button>
 			<button data-decimal>.</button>
 		</section>
+
+		<aside class="history-wrap">
+			<span class="icon">&darr;</span>
+			<div class="content">
+				<p>8x7+9 = <span class="accent">290</span></p>
+			</div>
+		</aside>
 
 		<script src="script.js"></script>
 	</body>

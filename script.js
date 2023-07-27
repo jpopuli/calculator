@@ -5,9 +5,14 @@ const backspace = document.querySelector('[data-delete]');
 const decimal = document.querySelector('[data-decimal]');
 const percentage = document.querySelector('[data-percentage]');
 const equal = document.querySelector('[data-equal]');
+const viewHistory = document.querySelector('[data-history]');
+const closeHistory = document.querySelector('.history-wrap .icon');
+const context = document.querySelector('.history-wrap p');
+const container = document.querySelector('.history-wrap');
 
 const expression = document.querySelector('[data-expression]');
 const calculated = document.querySelector('[data-calculated]');
+const history = [];
 
 numbers.forEach(function (btn) {
 	btn.addEventListener('click', function () {
@@ -41,6 +46,8 @@ decimal.addEventListener('click', function () {
 });
 
 equal.addEventListener('click', function () {
+	let format = `<p>${expression.textContent} = <span class="accent">${calculated.textContent}</span></p>`;
+	history.push(format);
 	expression.textContent = calculated.textContent;
 	calculated.textContent = '';
 });
@@ -48,6 +55,15 @@ equal.addEventListener('click', function () {
 percentage.addEventListener('click', function () {
 	calcPercentage(expression.textContent);
 	scrollRight(expression);
+});
+
+viewHistory.addEventListener('click', function () {
+	context.innerHTML = history.join('');
+	container.classList.toggle('show'); // Toggle the 'show' class to trigger the animation
+});
+
+closeHistory.addEventListener('click', function () {
+	container.classList.remove('show');
 });
 
 // Function to scroll the content to the right
@@ -78,7 +94,6 @@ function chooseOperator(operator) {
 	const operatorSymbols = ['+', '−', '×', '÷'];
 	const allowedFirstOperator = ['−']; // List of allowed operators as the first character
 
-	console.log(operator);
 	let currentExpression = expression.textContent;
 	let lastChar = currentExpression.slice(-1); // Get the last character of the expression
 
@@ -119,7 +134,6 @@ function appendDecimal() {
 			currentExpression += '.';
 		}
 	}
-
 	updateDisplay(currentExpression);
 }
 

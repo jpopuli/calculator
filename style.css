@@ -6,7 +6,7 @@
 
 body {
 	font-family: 'Segoe UI', sans-serif;
-	background-color: #f3f3f3;
+	background-color: #121212;
 }
 
 .nav {
@@ -18,11 +18,11 @@ body {
 }
 
 .nav button {
-	padding: 4px 8px;
 	border: none;
 	outline: none;
 	cursor: pointer;
-	text-decoration: underline;
+	background-color: transparent;
+	color: #cdcdcd;
 }
 
 .input {
@@ -34,11 +34,18 @@ body {
 	white-space: nowrap;
 }
 
-.input h1 {
+.input p:nth-child(1) {
 	max-width: 100%;
 	overflow-x: auto;
-	font-size: 2.2rem;
-	border-right: 2px solid #198890;
+	font-size: 2.5rem;
+	border-right: 2px solid #25cb00;
+	color: #fff;
+}
+
+.input p:nth-child(2) {
+	padding-top: 5px;
+	font-size: 1.2rem;
+	color: #cdcdcd;
 }
 
 .buttons {
@@ -52,21 +59,67 @@ body {
 }
 
 .buttons button {
-	font-size: 1.2rem;
+	font-size: 2rem;
 	cursor: pointer;
 	border: none;
 	outline: none;
 	border-radius: 4px;
-	background-color: #fcfcfc;
-	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+	background-color: #262626;
+	color: #cdcdcd;
 }
 
 .buttons .span-two {
-	background-color: #198890;
+	background-color: #25cb00;
 	color: #fff;
 	grid-row: span 2;
 }
 
 .buttons .math-x {
 	font-size: 0.9rem;
+}
+
+.buttons .accent,
+.history-wrap .accent {
+	color: #25cb00;
+}
+
+.history-wrap {
+	position: fixed;
+	bottom: 0;
+	background-color: #262626;
+	height: calc(100vh - 100px - 60px);
+	width: 100%;
+
+	/* CSS transition for smooth animation */
+	transition: transform 0.3s ease;
+	transform: translateY(100%); /* Start the container off-screen */
+}
+
+.history-wrap.show {
+	transform: translateY(0); /* Slide the container up to display */
+}
+
+.history-wrap .icon {
+	color: #25cb00;
+	font-size: 1.5rem;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.history-wrap p {
+	color: #fff;
+}
+
+.history-wrap .content {
+	padding: 4px 10px;
+}
+
+.history-wrap .content p {
+	font-size: 1.2rem;
+	white-space: nowrap;
+	max-width: 100%;
+	overflow-x: auto;
+	margin-bottom: 4px;
 }
