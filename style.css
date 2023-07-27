@@ -12,7 +12,7 @@ body {
 .nav {
 	height: 60px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 	padding: 0 8px;
 }
@@ -35,7 +35,10 @@ body {
 }
 
 .input h1 {
+	max-width: 100%;
+	overflow-x: auto;
 	font-size: 2.2rem;
+	border-right: 2px solid #198890;
 }
 
 .buttons {
@@ -58,9 +61,10 @@ body {
 	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
 }
 
-.buttons button:last-child {
+.buttons .span-two {
 	background-color: #198890;
 	color: #fff;
+	grid-row: span 2;
 }
 
 .buttons .math-x {

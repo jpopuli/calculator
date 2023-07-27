@@ -9,50 +9,39 @@
 	</head>
 	<body>
 		<nav class="nav">
-			<!-- Switch -->
-			<button>Light Mode</button>
-
 			<!-- History -->
 			<button>History</button>
 		</nav>
 
 		<section class="input">
-			<small id="sub"></small>
-			<h1 id="main"></h1>
+			<h1 data-expression></h1>
+			<p data-calculated></p>
 		</section>
 
 		<section class="buttons">
-			<button type="button" class="math-x">%</button>
-			<button type="button" class="math-x">CE</button>
-			<button type="button" class="math-x">C</button>
-			<button type="button" class="math-x">DEL</button>
+			<button data-clear>C</button>
+			<button data-operator>&divide;</button>
+			<button data-operator>&times;</button>
+			<button data-delete>DEL</button>
 
-			<button type="button" class="math-x"><small>1</small>/x</button>
-			<button type="button" class="math-x">
-				x<sup><small>2</small></sup>
-			</button>
-			<button type="button" class="math-x">&radic;x</button>
-			<button type="button" class="operator">&divide;</button>
+			<button data-number>7</button>
+			<button data-number>8</button>
+			<button data-number>9</button>
+			<button data-operator>&minus;</button>
 
-			<button type="button">7</button>
-			<button type="button">8</button>
-			<button type="button">9</button>
-			<button type="button" class="operator">&times;</button>
+			<button data-number>4</button>
+			<button data-number>5</button>
+			<button data-number>6</button>
+			<button data-operator>&plus;</button>
 
-			<button type="button">4</button>
-			<button type="button">5</button>
-			<button type="button">6</button>
-			<button type="button" class="operator">&minus;</button>
+			<button data-number>1</button>
+			<button data-number>2</button>
+			<button data-number>3</button>
+			<button data-equal class="span-two">=</button>
 
-			<button type="button">1</button>
-			<button type="button">2</button>
-			<button type="button">3</button>
-			<button type="button" class="operator">&plus;</button>
-
-			<button type="button" class="math-x">+/-</button>
-			<button type="button">0</button>
-			<button type="button">.</button>
-			<button type="button" class="equal">=</button>
+			<button data-percentage>%</button>
+			<button data-number>0</button>
+			<button data-decimal>.</button>
 		</section>
 
 		<script src="script.js"></script>
