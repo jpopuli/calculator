@@ -58,7 +58,11 @@ percentage.addEventListener('click', function () {
 });
 
 viewHistory.addEventListener('click', function () {
-	context.innerHTML = history.join('');
+	if (history.length === 0) {
+		context.innerHTML = '<small>No history</small>';
+	} else {
+		context.innerHTML = history.join('');
+	}
 	container.classList.toggle('show'); // Toggle the 'show' class to trigger the animation
 });
 
