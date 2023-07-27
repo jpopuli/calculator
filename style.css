@@ -6,7 +6,12 @@
 
 body {
 	font-family: 'Segoe UI', sans-serif;
+}
+
+.wrapper {
+	max-width: 320px;
 	background-color: #121212;
+	margin: 0 auto;
 }
 
 .nav {
@@ -121,5 +126,5 @@ body {
 	white-space: nowrap;
 	max-width: 100%;
 	overflow-x: auto;
-	margin-bottom: 4px;
+	margin-bottom: 5px;
 }
