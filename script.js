@@ -50,6 +50,7 @@ equal.addEventListener('click', function () {
 	history.push(format);
 	expression.textContent = calculated.textContent;
 	calculated.textContent = '';
+	context.innerHTML = history.join('');
 });
 
 percentage.addEventListener('click', function () {

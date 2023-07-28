@@ -7,6 +7,7 @@
 body {
 	font-family: 'Segoe UI', sans-serif;
 	background-color: #121212;
+	max-height: calc(100vh - 100px - 60px);
 }
 
 .nav {
@@ -92,7 +93,7 @@ body {
 
 	/* CSS transition for smooth animation */
 	transition: transform 0.3s ease;
-	transform: translateY(100%); /* Start the container off-screen */
+	transform: translateY(calc(100vh - 100px - 60px)); /* Start the container off-screen */
 }
 
 .history-wrap.show {
@@ -122,4 +123,55 @@ body {
 	max-width: 100%;
 	overflow-x: auto;
 	margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+	.calculator {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		overflow: hidden;
+	}
+
+	.calculator .main {
+		width: 320px;
+		max-width: 320px;
+	}
+
+	.main .nav button {
+		display: none;
+	}
+
+	.history-wrap {
+		all: unset;
+		width: calc(100vw - 320px);
+		height: 100vh;
+		position: relative;
+		padding: 20px;
+		background-color: #262626;
+		color: #cdcdcd;
+	}
+
+	.history-wrap::before {
+		content: 'History';
+		opacity: 0.5;
+		position: relative;
+		top: 0;
+		left: 0;
+		color: #cdcdcd;
+	}
+
+	.history-wrap.show {
+		all: unset;
+	}
+
+	.history-wrap .icon {
+		display: none;
+	}
+
+	.history-wrap .content {
+		padding: unset;
+		margin-top: 1rem;
+		height: inherit;
+	}
 }

@@ -19,3 +19,7 @@ A simple and user-friendly calculator built with HTML, CSS, and JavaScript. Perf
 ### Validation
 
 ![Default](screenshots/s4.PNG);
+
+### Desktop View
+
+![Default](screenshots/s5.PNG);
